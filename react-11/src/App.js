@@ -1,12 +1,13 @@
-import Message from './component/Message'
-import Home from './component/Home'
+import Message from './components/Message'
+import Hero from './components/Hero'
 function App(){
     return <div>
-        <h1>hello</h1>
-        <h1>this is srilatha</h1>
-        <Message/>
+        <h1>App component</h1>
         <hr/>
-        <Home/>
+       <Hero/>
+        <hr/>
+       <Message/>
+
     </div>
 }
 export default App
