@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import App from '../../react-11/src/App'
+import App from '../../class-3/App'
 //ReactDom.render(1,2)
 //ReactDom.render(what you want to render,where you want to render)
 //ReactDom.render("Hello",document.getElementById("abc"))
