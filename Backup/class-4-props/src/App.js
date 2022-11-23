@@ -1,5 +1,5 @@
-import CompA from './src/components/CompA'
-import User from './src/data/User'
+import CompA from './components/CompA'
+import User from './data/User'
 function App(){
         return  <div>
             <h1> App component</h1>
