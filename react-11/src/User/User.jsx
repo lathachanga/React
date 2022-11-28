@@ -6,15 +6,15 @@ class User extends React.Component{
           super(props)
           console.log("first constructor")
           this.state= {
-                   users:[]
+                   user:{}
           }
     }
     get_User_Handler =()=>{
            Axios.get('https://dummyjson.com/users')
-                .then((resp)=>{
-                    console.log(resp.data)
+                .then((responce)=>{
+                    console.log(responce.data)
                     this.setState({
-                        users: resp.data
+                        user: responce.data
                     })
                 })
                 .catch()
@@ -38,15 +38,22 @@ class User extends React.Component{
                                       </tr>
                                   </thead>
                                    <tbody>
-                                     { 
-                                          this.state.users.map((user)=>{
-                                           return <tr>
-                                           <td>{user.id}</td>
-                                           <td>{user.firstName}</td>
-                                           <td>{user.email}</td>
-                                           </tr>
-                                          })
-                                     }
+                                    {    
+                                       Object.keys(this.state.user).length > 0 ? 
+                                        <>
+                                         {
+                                            this.state.user.users.map((userObj)=>{
+                                            return <tr>
+                                            <td>{userObj.id}</td>
+                                            <td>{userObj.firstName}</td>
+                                            <td>{userObj.email}</td>
+                                            </tr>
+                                           })
+                                         } 
+                                        </> : null
+                                  }
+                                    
+                                     
                                  </tbody>
                         </table>
                     </div>

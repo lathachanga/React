@@ -6,7 +6,7 @@ class User extends React.Component{
           super(props)
           console.log("first constructor")
           this.state={
-                   users:[]
+                   user:[]
           }
     }
    componentDidMount(){
@@ -14,7 +14,7 @@ class User extends React.Component{
     Axios.get('https://dummyjson.com/users')
     .then((response)=>{
         this.setState({
-            users:response.data
+            user:response.data
         })
     })
     .catch()
@@ -24,8 +24,7 @@ class User extends React.Component{
         return <div>
         <h1>User Component</h1>
         <pre>{JSON.stringify(this.state)}</pre>
-         <button onClick={this.get_User_Handler}>Get users</button>
-         <div className="container">
+        <div className="container">
             <div className="row">
                 <div className="col-md-6">
                     <table className="table table-hover">
@@ -37,17 +36,22 @@ class User extends React.Component{
                           </tr>
                         </thead>
                         <tbody>
-                             { 
-                                this.state.users.map((user)=>{
-                                   
-                                   return <tr>
-                                       <th>{user.id}</th>
-                                       <th>{user.firstName}</th>
-                                       <th>{user.email}</th>
-                                   </tr>
-
-                                 })
-                             }
+                               {    
+                                       Object.keys(this.state.user).length > 0 ? 
+                                        <>
+                                         {
+                                            this.state.user.users.map((userObj)=>{
+                                            return <tr>
+                                            <td>{userObj.id}</td>
+                                            <td>{userObj.firstName}</td>
+                                            <td>{userObj.email}</td>
+                                            </tr>
+                                           })
+                                         } 
+                                        </> : null
+                               }
+                                    
+                                     
                         </tbody>
                     </table>
                 </div>

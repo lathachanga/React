@@ -10,6 +10,7 @@ class Navbar extends React.Component{
                     <li className="nav-list"><Link to="/about" className="nav-link text-white">About</Link></li>
                     <li className="nav-list"><Link to="/contact" className="nav-link text-white">Contact</Link></li>
                     <li className="nav-list"><Link to="/user" className="nav-link text-white">User</Link></li>
+                    <li className="nav-list"><Link to="/digital" className="nav-link text-white">Clock</Link></li>
                 </ul>
              </div>
         </nav>   
