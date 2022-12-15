@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 const Login=()=>{
     let [user,setUser]=useState({email:"",password:""})
     let updateHandler=(event)=>{
-          setUser({...user,[event.target.vlaue]:event.target.value})
+          setUser({...user,[event.target.value]:event.target.value})
     }
     return <div className="container mt-5">
         <pre>{JSON.stringify(user)}</pre>

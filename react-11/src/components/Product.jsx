@@ -5,9 +5,10 @@ import Greengrapes from '../images/Greengrapes.jpg'
 import Mango from '../images/Mango.jpg'
 import Orange from '../images/Orange.jpg'
 import Strawberry from '../images/Strawberry.jpg'
+import Footer from'./Footer'
 class Product extends React.Component{
     render(){
-        return     <div className="container mt-5 mt-5">
+        return     <div className="container-fluid mt-5 mt-5">
                         <div className="row">
                             <div className="col text-center">
                                 <p> Green Agriculture</p>
@@ -16,8 +17,7 @@ class Product extends React.Component{
                                      <p><h6>The best agricultural organic products are available here</h6></p>
                                 </div>
                             </div>
-                     
-                       <div className="row">
+                            <div className="row">
                             <div className="col-4 text-center">
                                 <div className="card">
                                     <div className="card-body">
@@ -110,6 +110,8 @@ class Product extends React.Component{
                                 <button className="btn btn-success">Read More</button>
                             </div>
                         </div>
+                  <Footer/>
+
                    </div>
       
     }

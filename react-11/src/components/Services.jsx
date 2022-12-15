@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 class Services extends React.Component{
     render(){
         return <div>
@@ -18,7 +19,8 @@ class Services extends React.Component{
                     <div className="card-body shadow">
                         <span><i className="bi bi-shop-window"></i></span>  
                         <h2>Always Fresh</h2>
-                        <p> Our Organic Products are always fresh</p>      
+                        <p> Our Organic Products are always fresh.Organic food is about food and drinks produced by methods complying with the standards of organic farming.
+                                     Standards vary worldwide,but Organic farming features practices that cycle resources. </p>      
                     </div>
                 </div>
             </div>
@@ -27,7 +29,8 @@ class Services extends React.Component{
                     <div className="card-body shadow">
                         <span><i className="bi bi-shop-window"></i></span>  
                         <h2>Always Health</h2>
-                        <p> Our Organic Products are always  Health</p>      
+                        <p> Our Organic Products are always Health.Organic food is about food and drinks produced by methods complying with the standards of organic farming.
+                                     Standards vary worldwide,but Organic farming features practices that cycle resources. </p>      
                     </div>
                 </div>
             </div>
@@ -36,13 +39,14 @@ class Services extends React.Component{
                     <div className="card-body shadow">
                         <span><i className="bi bi-shop-window"></i></span>  
                         <h4>Always Chemical-free </h4>
-                        <p> Our Organic Products are always Chemical-free  </p>      
+                        <p> Our Organic Products are always Chemical-free .Organic food is about food and drinks produced by methods complying with the standards of organic farming.
+                                     Standards vary worldwide,but Organic farming features practices that cycle resources.  </p>      
                     </div>
                 </div>
             </div>
            </div>
         </div>
- 
+         <Footer/>
         </div>
     }
 }
